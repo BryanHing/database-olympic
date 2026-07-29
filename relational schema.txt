@@ -1,0 +1,44 @@
+Event(EVENTID, EventName, Sport, Discipline, Gender)
+Participation(PARTICIPATIONID, EVENTID, PARTICIPANTID, TEAMID, Position, Result)
+FK EVENTID REF Event(EVENTID)
+
+Participant(ParticipantID, FirstName, LastName, Gender, DateOfBirth, Country)
+Participation(PARTICIPATIONID, EVENTID, PARTICIPANTID, TEAMID, Position, Result)
+FK PARTICIPANTID REF Participant(PARTICIPANTID)
+
+Team(TEAMID, TeamName, Country)
+Participation(PARTICIPATIONID, EVENTID, PARTICIPANTID, TEAMID, Position, Result)
+FK TEAMID REF Team(TEAMID)
+
+Event(EVENTID, EventName, Sport, Discipline, Gender)
+Medal(MEDALID, MedalType, EVENTID, PARTICIPANTID, TEAMID)
+FK EVENTID REF Event(EVENTID)
+
+Participation(PARTICIPATIONID, EVENTID, PARTICIPANTID, TEAMID, Position, Result)
+Medal(MEDALID, MedalType, EVENTID, PARTICIPANTID, TEAMID)
+FK PARTICIPANTID REF Participation(PARTICIPANTID)
+
+Team(TEAMID, TeamName, Country)
+Medal(MEDALID, MedalType, EVENTID, PARTICIPANTID, TEAMID)
+FK TEAMID REF Team(TEAMID)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
